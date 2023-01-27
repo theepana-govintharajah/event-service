@@ -19,8 +19,13 @@ public class EventService {
     private final EventRepository eventRepository;
 
     public void createEvent(EventRequest eventRequest) {
-//        Event event=new Event();
-//        event.setEventNumber(UUID.randomUUID().toString());
 
+        Event event=Event.builder()
+                .name(eventRequest.getName())
+                .venue(eventRequest.getVenue())
+                .startDate(eventRequest.getStartDate())
+                .build();
+        eventRepository.save(event);
+        log.info("Event {} is saved", event.getId());
     }
 }
