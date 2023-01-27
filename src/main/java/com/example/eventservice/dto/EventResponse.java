@@ -1,17 +1,19 @@
 package com.example.eventservice.dto;
 
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-public class EventRequest {
+public class EventResponse {
+    private Integer id;
     private String name;
     private String venue;
 //    private Date startDate;
