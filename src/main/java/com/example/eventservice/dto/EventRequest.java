@@ -14,5 +14,5 @@ import java.util.List;
 public class EventRequest {
     private String name;
     private String venue;
-//    private Date startDate;
+    private Date startDate;
 }

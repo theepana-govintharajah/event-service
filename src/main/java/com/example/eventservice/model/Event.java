@@ -19,5 +19,5 @@ public class Event {
     private Integer id;
     private String name;
     private String venue;
-//    private Date startDate;
+    private Date startDate;
 }

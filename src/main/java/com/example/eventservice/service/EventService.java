@@ -21,11 +21,11 @@ public class EventService {
     private final EventRepository eventRepository;
 
     public void createEvent(EventRequest eventRequest) {
-
+        log.info("Executing event");
         Event event=Event.builder()
                 .name(eventRequest.getName())
                 .venue(eventRequest.getVenue())
-//                .startDate(eventRequest.getStartDate())
+                .startDate(eventRequest.getStartDate())
                 .build();
         eventRepository.save(event);
         log.info("Event {} is saved", event.getId());
@@ -41,7 +41,7 @@ public class EventService {
                 .id(event.getId())
                 .name(event.getName())
                 .venue(event.getVenue())
-//                .startDate(event.getStartDate())
+                .startDate(event.getStartDate())
                 .build();
     }
 }
